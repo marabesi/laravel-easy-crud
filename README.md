@@ -1,4 +1,7 @@
 # easy-crud
+
+[![Build Status](https://travis-ci.org/marabesi/easy-crud.svg?branch=master)](https://travis-ci.org/marabesi/easy-crud)
+
 (Laravel 5+) Simple and effective way to generate CRUD from your models or database
 
 # What you can do?
