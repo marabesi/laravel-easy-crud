@@ -13,7 +13,15 @@ class EasyCrud extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->loadViewsFrom(__DIR__ . '/../../views', 'easy-crud');
+
+        $this->publishes([
+            __DIR__ . '/../../assets/gentella' => public_path('vendor/easy-crud'),
+        ], 'public');
+
+        $this->publishes([
+            __DIR__ . '/../../config/easy-crud.php' => config_path('easy-crud.php'),
+        ]);
     }
 
     /**
@@ -23,6 +31,6 @@ class EasyCrud extends ServiceProvider
      */
     public function register()
     {
-        //
+        include __DIR__. '/../../routes/web.php';
     }
 }
