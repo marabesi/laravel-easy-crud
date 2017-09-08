@@ -8,6 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Easy CRUD | powered by Gentella</title>
+    
+    <!-- Bootstrap -->
+    <link href="./vendor/easy-crud/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="/vendor/easy-crud/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="/vendor/easy-crud/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="/vendor/easy-crud/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+	
+    <!-- bootstrap-progressbar -->
+    <link href="/vendor/easy-crud/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="/vendor/easy-crud/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <!-- bootstrap-daterangepicker -->
+    <link href="/vendor/easy-crud/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <link href="/vendor/easy-crud/css/custom.min.css" rel="stylesheet">
   </head>
@@ -25,7 +41,7 @@
             </div>
 
             <div class="clearfix"></div>
-
+            
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <h3>General</h3>
