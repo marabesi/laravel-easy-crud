@@ -12,12 +12,60 @@
 
 # What you can do?
 
-- Generate CRUD from database table
 - Generate CRUD from Laravel models
+- Generate CRUD from database table (not ready)
+
+# Powered by Gentelella theme
+![Gentelella Bootstrap Admin Template](https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/gentelella-admin-template-preview.jpg "Gentelella Theme Browser Preview")
 
 # Features
 
 - Friendly admin to manage your data (CRUD)
-- Prevent collisions with defineds routes
+- Prevent collisions with defined routes
 - Beautiful admin template
 
+# Installing
+
+```
+composer require marabesi/easy-crud
+```
+
+Publish the vendor assets to you current project
+
+```
+artisan vendor:publish
+```
+
+Now, you should have a file called `easy-crud.php` inside your config folder, open it and edit as you wish.
+
+```php
+<?php
+
+return [
+    /**
+     * All models that should have a CRUD. The key of the element will
+     * appear as the menu label in the admin area
+     */
+    'models' => [
+        'Users' => \App\User::class
+    ],
+
+    /**
+     * URL that should be used to access the gentella admin
+     * where you can manage all models that have CRUD
+     */
+    'url_base' => '/admin',
+
+    /**
+     * You might want to have some validation before accessing
+     * the gentela admin, to achieve that, just inform the middleware 
+     * class name in the array. It will go through each middleware declared 
+     * above.
+     */
+    'middlewares' => [
+    ]
+];
+```
+
+Add every model that you want to see in the admin in the `models` array, the 
+key should be the label name. It will appear in the admin area.
