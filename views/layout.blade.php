@@ -9,7 +9,7 @@
 
     <title>Easy CRUD | powered by Gentella</title>
 
-    <link href="vendor/easy-crud/css/custom.min.css" rel="stylesheet">
+    <link href="/vendor/easy-crud/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -18,7 +18,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title">
+              <a href="{{ $url_base }}" class="site_title">
                 <i class="fa fa-paw"></i>
                 <span>Easy CRUD!</span>
               </a>
@@ -26,22 +26,21 @@
 
             <div class="clearfix"></div>
 
-            <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="index.html">Dashboard</a></li>
-                      <li><a href="index2.html">Dashboard2</a></li>
-                      <li><a href="index3.html">Dashboard3</a></li>
-                    </ul>
-                  </li>
+                  @foreach($models as $alias => $class)
+                    <li><a><i class="fa fa-home"></i> {{ $alias }} <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="{{ $url_base }}/{{ str_replace('\\', '-', $class) }}">Lista</a></li>
+                        <li><a href="{{ $url_base }}/{{ str_replace('\\', '-', $class) }}/create">Create</a></li>
+                      </ul>
+                    </li>
+                  @endforeach
                 </ul>
               </div>
             </div>
-            <!-- /sidebar menu -->
 
             <!-- /menu footer buttons -->
             <div class="sidebar-footer hidden-small">
@@ -64,7 +63,7 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
-         
+          @yield('content')
         </div>
         <!-- /page content -->
 
@@ -79,7 +78,7 @@
       </div>
     </div>
 
-    <script src="vendor/easy-crud/js/jquery-3.2.1.min.js"></script>
-    <script src="vendor/easy-crud/js/custom.min.js"></script>
+    <script src="/vendor/easy-crud/js/jquery-3.2.1.min.js"></script>
+    <script src="/vendor/easy-crud/js/custom.min.js"></script>
   </body>
 </html>
