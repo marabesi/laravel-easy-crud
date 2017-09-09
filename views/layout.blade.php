@@ -30,7 +30,6 @@
 
   <body class="nav-md">
     <div class="container body">
-      <div class="main_container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
@@ -46,7 +45,8 @@
                 <h3>General</h3>
                 <ul class="nav side-menu">
                   @foreach($models as $alias => $class)
-                    <li><a><i class="fa fa-home"></i> {{ $alias }} <span class="fa fa-chevron-down"></span></a>
+                    <li class="">
+                      <a><i class="fa fa-home"></i> {{ $alias }} <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
                         <li><a href="{{ $url_base }}/{{ str_replace('\\', '-', $class) }}">List</a></li>
                         <li><a href="{{ $url_base }}/{{ str_replace('\\', '-', $class) }}/create">Create</a></li>
@@ -76,7 +76,8 @@
       </div>
     </div>
 
-    <script src="/vendor/easy-crud/js/jquery-3.2.1.min.js"></script>
+    <script src="/vendor/easy-crud/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="/vendor/easy-crud/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/vendor/easy-crud/js/custom.min.js"></script>
   </body>
 </html>

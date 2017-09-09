@@ -54,4 +54,39 @@ class Crud extends Controller
             'model' => $model->find($id),
         ]);
     }
+
+    public function postUpdate(
+        $modelClass,
+        $id,
+        Model $factory,
+        Request $request
+    ) {
+        $model = $factory->create($modelClass);
+
+        $model = $model->find($id);
+
+        foreach ($request->all() as $property => $value) {
+            $model->$property = $value;
+        }
+
+        $model->save();
+
+        $route = config('easy-crud.url_base') . '/' . $modelClass;
+
+        return redirect($route);
+    }
+
+    public function getDelete(
+        $modelClass,
+        $id,
+        Model $factory)
+    {
+        $model = $factory->create($modelClass);
+
+        $model->find($id)->delete();
+
+        $route = config('easy-crud.url_base') . '/' . $modelClass;
+
+        return redirect($route);
+    }
 }
