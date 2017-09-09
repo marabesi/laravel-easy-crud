@@ -2,15 +2,17 @@
 
 return [
     /**
-     * All models that should have a CRUD.
+     * All models that should have a CRUD. The key of the element will
+     * appear as the menu label in the admin area
      */
-    'models' => [],
+    'models' => [
+    ],
 
     /**
      * URL that should be used to access the gentella admin
      * where you can manage all models that have CRUD
      */
-    'url_base' => 'http://localhost/admin',
+    'url_base' => '/admin',
 
     /**
      * You might want to have some validation before accessing

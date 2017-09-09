@@ -10,7 +10,7 @@
     <title>Easy CRUD | powered by Gentella</title>
     
     <!-- Bootstrap -->
-    <link href="./vendor/easy-crud/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/easy-crud/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="/vendor/easy-crud/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
@@ -35,7 +35,6 @@
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
               <a href="{{ $url_base }}" class="site_title">
-                <i class="fa fa-paw"></i>
                 <span>Easy CRUD!</span>
               </a>
             </div>
@@ -49,7 +48,7 @@
                   @foreach($models as $alias => $class)
                     <li><a><i class="fa fa-home"></i> {{ $alias }} <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
-                        <li><a href="{{ $url_base }}/{{ str_replace('\\', '-', $class) }}">Lista</a></li>
+                        <li><a href="{{ $url_base }}/{{ str_replace('\\', '-', $class) }}">List</a></li>
                         <li><a href="{{ $url_base }}/{{ str_replace('\\', '-', $class) }}/create">Create</a></li>
                       </ul>
                     </li>
@@ -57,23 +56,6 @@
                 </ul>
               </div>
             </div>
-
-            <!-- /menu footer buttons -->
-            <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Settings">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-              </a>
-            </div>
-            <!-- /menu footer buttons -->
           </div>
         </div>
 

@@ -5,7 +5,6 @@
 <div>
     <div class="x_panel">
         <div class="x_title">
-        <h2>Table design <small>Custom design</small></h2>
         <ul class="nav navbar-right panel_toolbox">
             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
             </li>
@@ -32,11 +31,14 @@
                 <thead>
                     <tr class="headings">
                         <th>
-                            <div class="icheckbox_flat-green" style="position: relative;"><input id="check-all" class="flat" style="position: absolute; opacity: 0;" type="checkbox"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div>
+                            <div class="icheckbox_flat-green" style="position: relative;">
+                                <input id="check-all" class="flat" style="position: absolute; opacity: 0;" type="checkbox">
+                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins>
+                            </div>
                         </th>
-
+                        <th class="column-title" style="display: table-cell;">Id</th>
                         @foreach($properties as $property)
-                            <th class="column-title" style="display: table-cell;">{{ $property }}</th>
+                            <th class="column-title" style="display: table-cell;">{{ ucfirst($property) }}</th>
                         @endforeach
                         <th class="column-title no-link last" style="display: table-cell;"><span class="nobr">Action</span>
                         </th>
@@ -52,6 +54,7 @@
                             <td class="a-center ">
                                 <div class="icheckbox_flat-green" style="position: relative;"><input class="flat" name="table_records" style="position: absolute; opacity: 0;" type="checkbox"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div>
                             </td>
+                            <td>{{ $row->id }}</td>
                             @foreach($properties as $property)
                                 <td class=" ">
                                     <a href="{{ $url_base }}/{{ $model }}/update/{{ $row->id }}">{{ $row->$property }}</a>
