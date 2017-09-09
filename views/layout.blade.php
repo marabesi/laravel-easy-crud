@@ -46,7 +46,7 @@
                 <ul class="nav side-menu">
                   @foreach($models as $alias => $class)
                     <li class="">
-                      <a><i class="fa fa-home"></i> {{ $alias }} <span class="fa fa-chevron-down"></span></a>
+                      <a>{{ $alias }} <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
                         <li><a href="{{ $url_base }}/{{ str_replace('\\', '-', $class) }}">List</a></li>
                         <li><a href="{{ $url_base }}/{{ str_replace('\\', '-', $class) }}/create">Create</a></li>

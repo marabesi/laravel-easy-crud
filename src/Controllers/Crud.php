@@ -79,8 +79,8 @@ class Crud extends Controller
     public function getDelete(
         $modelClass,
         $id,
-        Model $factory)
-    {
+        Model $factory
+    ) {
         $model = $factory->create($modelClass);
 
         $model->find($id)->delete();
