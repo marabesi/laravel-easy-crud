@@ -10,6 +10,18 @@
 
 (Laravel 5+) Simple and effective way to generate CRUD from your models or database
 
+## Version Compatibility
+
+ Laravel  | EasyCrud
+:---------|:----------
+ 4.x.x    | Not supported
+ 5.0.x    | Not supported
+ 5.1.x    | Not supported
+ 5.2.x    | 1.0.x
+ 5.3.x    | Not supported
+ 5.4.x    | Not supported
+ 5.5.x    | Not supported
+
 # What you can do?
 
 - Generate CRUD from Laravel models
