@@ -22,6 +22,10 @@ class EasyCrud extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../../config/easy-crud.php' => config_path('easy-crud.php'),
         ]);
+
+        view()->composer('*', function($view) {
+            return $view->with(config('easy-crud'));
+        });
     }
 
     /**

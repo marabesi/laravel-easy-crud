@@ -2,18 +2,13 @@
 
 namespace EasyCrud\Controllers;
 
-use App\Http\Controllers\Controller;
+use Illuminate\Routing\Controller as Controller;
 
 class Dashboard extends Controller
 {
 
     public function getIndex()
     {
-        $models = config('easy-crud.models');
-        
-        return view('easy-crud::dashboard', [
-            'models' => $models,
-            'url_base' => config('easy-crud.url_base'),
-        ]);
+        return view('easy-crud::dashboard');
     }
 }

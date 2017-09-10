@@ -2,7 +2,7 @@
 
 namespace EasyCrud\Controllers;
 
-use App\Http\Controllers\Controller;
+use Illuminate\Routing\Controller as Controller;
 use Illuminate\Http\Request;
 use EasyCrud\Factory\Model;
 
@@ -14,8 +14,6 @@ class Crud extends Controller
 
         return view('easy-crud::table', [
             'table_content' => $model->all(),
-            'models' => config('easy-crud.models'),
-            'url_base' => config('easy-crud.url_base'),
             'properties' => $model->getFillable(),
             'model' => $modelName,
         ]);
@@ -26,8 +24,6 @@ class Crud extends Controller
         $model = $factory->create($model);
 
         return view('easy-crud::form', [
-            'models' => config('easy-crud.models'),
-            'url_base' => config('easy-crud.url_base'),
             'properties' => $model->getFillable(),
         ]);
     }
@@ -48,8 +44,6 @@ class Crud extends Controller
         $model = $factory->create($model);
         
         return view('easy-crud::form', [
-            'models' => config('easy-crud.models'),
-            'url_base' => config('easy-crud.url_base'),
             'properties' => $model->getFillable(),
             'model' => $model->find($id),
         ]);
