@@ -42,6 +42,14 @@
 composer require marabesi/easy-crud
 ```
 
+Update the service provider list
+
+```php
+'providers' => [
+    EasyCrud\Providers\EasyCrud::class,
+]
+```
+
 Publish the vendor assets to you current project
 
 ```
