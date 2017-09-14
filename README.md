@@ -16,7 +16,7 @@
 :---------|:----------
  4.x.x    | Not supported
  5.0.x    | Not supported
- 5.1.x    | Not supported
+ 5.1.x    | 1.0.x
  5.2.x    | 1.0.x
  5.3.x    | Not supported
  5.4.x    | Not supported
