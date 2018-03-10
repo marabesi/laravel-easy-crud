@@ -89,3 +89,7 @@ return [
 
 Add every model that you want to see in the admin in the `models` array, the 
 key should be the label name. It will appear in the admin area.
+
+# More info
+
+https://marabesi.com/php/2017/09/21/easy-crud.html
