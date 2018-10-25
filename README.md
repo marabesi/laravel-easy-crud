@@ -7,6 +7,7 @@
 [![Latest Unstable Version](https://poser.pugx.org/marabesi/easy-crud/v/unstable)](https://packagist.org/packages/marabesi/easy-crud)
 [![License](https://poser.pugx.org/marabesi/easy-crud/license)](https://packagist.org/packages/marabesi/easy-crud)
 [![composer.lock](https://poser.pugx.org/marabesi/easy-crud/composerlock)](https://packagist.org/packages/marabesi/easy-crud)
+[![HitCount](http://hits.dwyl.io/marabesi/laravel-easy-crud.svg)](http://hits.dwyl.io/marabesi/laravel-easy-crud)
 
 (Laravel 5+) Simple and effective way to generate CRUD from your models or database
 
